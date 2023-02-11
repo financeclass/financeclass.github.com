@@ -1,0 +1,360 @@
+<!DOCTYPE html><html><head>
+      <title>aa</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview p {
+  margin-bottom: 33px;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="how-to-keep-a-cat-if-you-are-allergic-to-cats">How to Keep a Cat if You Are Allergic to Cats</h1>
+
+<p>Cats make great pets, but if you&#x2019;re allergic to cats, keeping one is a bit more complicated. Allergies in cats are caused by proteins in the cat&#x2019;s sloughed-off skin cells, called dander, and its saliva.[1] By maintaining an optimal environment that reduces your exposure to cat dander and saliva, as well as taking measures to keep your allergies under control, you can keep a cat successfully even if you&#x2019;re allergic to it.</p>
+<h2 class="mume-header" id="maintaining-an-optimal-environment">Maintaining an Optimal Environment</h2>
+
+<p>Keep your cat out of your bedroom. You likely spend at least a third of your day in your bedroom sleeping. By keeping your cat out of your room, you will greatly reduce your overall exposure to cat allergens. Keep the door to your bedroom shut when you are gone, and ensure that your cat&#x2019;s toys and food are located elsewhere in the house.</p>
+<p>Consider a HEPA filter. HEPA filters are high-powered air-particle filters that can remove microscopic pet dander from the air. Place HEPA filters in the rooms you spend the most time in at home, such as your bedroom or home office, to reduce your exposure to allergens. Most HEPA filters are rated to clean a certain number of cubic feet (or meters). Aim to buy a HEPA filter the filtering capacity of which matches the size of your room.</p>
+<p>Change out the filters in your HVAC system. If you have central heat and air, you can use your HVAC system to filter the air throughout your house. Purchase air filters that have a high minimum efficiency reporting value (MERV) rating. These filters will capture pet dander as well as other allergens such as pollen, molds, and dust mites.</p>
+<ul>
+<li>Look for filters with a MERV rating of 13 or higher to capture more pollen.[5]</li>
+<li>Choose disposable filters and replace them every 3 months.[6]</li>
+</ul>
+<p>Clean the house regularly. Cat hair, which is covered in allergenic saliva, and cat dander are shed in your house constantly. To keep your allergies under control, clean your house at least once a week to reduce the number of allergens in the environment. If possible, it is preferable to hire someone without allergies to clean your house, as sweeping and vacuuming can dust allergens up into the air and aggravate allergy symptoms.[7]</p>
+<ul>
+<li>If you allow your cat in your bed, wash your sheets in hot water twice a week.[8]</li>
+<li>Certain vacuums, such as the Eureka Sanitaire True HEPA and the Sunpentown V8506 with HEPA, have HEPA filters, which can remove even more allergenic particles from the air. It may be worth investing in one if your allergies are severe.</li>
+</ul>
+<p>Switch out carpets and drapes for allergy-friendly home furnishings. Cat dander is microscopic and can be difficult to draw out of rugs, drapes and upholstered surfaces even with regular cleaning. Wood, stone, and metal furnishings are all easier to clean fully than fabric surfaces. By swapping rugs for hardwoods or tile, and choosing non-upholstered chairs, you can reduce the amount of pet dander in your home.[9]</p>
+<h2 class="mume-header" id="keeping-your-allergies-under-control">Keeping Your Allergies Under Control</h2>
+
+<p>Wash your hands after touching your cat. Your cat licks itself clean, which means its hair is covered in allergenic saliva. After touching your cat, be sure to wash your hands with soap and warm water, scrubbing for at least 30 seconds. This is especially important before you touch your face, which is particularly sensitive to allergens.[10]</p>
+<p>Use a dander-reducing solution on your cat weekly. Certain dander-reducing solutions and shampoos, such as Allerpet and Nature&#x2019;s Miracle Allergen Blocker, cleanse your cat and can remove some allergy-causing dander. Wet a small washcloth with the cleaner and wipe your cat&#x2019;s face and body, going with the direction of the fur rather than against it. While there is no definitive proof that these truly reduce the allergens coming from your pet, it may be worth trying if your allergies are more mild.[11]</p>
+<p>Take OTC allergy medication regularly. Taking an allergy medication, such as Benadryl or Claritin, can reduce allergy symptoms. One to two pills of Benadryl can be taken every 4-6 hours, and one pill of Claritin can be taken once daily. These medications block your body&#x2019;s histamine reaction, which is what makes your eyes water and skin itchy in response to cat dander.[12]</p>
+<ul>
+<li>If your allergies are severe, it may make sense to have a consultation with an allergist to see if prescription allergy medication is right for you.</li>
+</ul>
+<p>Consider allergy shots. If you have your heart set on having a cat despite your allergies, allergy shots can actually reduce how allergic you are to cats. These shots are made from a serum of cat allergens and injected into the upper arm at incrementally increasing doses over a number of weeks until you reach a maintenance dose, which you can receive monthly. The shots increase your tolerance for cat allergens, effectively reducing your symptoms. You will need to be tested for your allergy by an allergist, who will mix an injection serum specifically for you.[13]</p>
+<ul>
+<li>It often takes up to 6 months of regular injections for allergy shots to take effect. They also work better for some people than for others.</li>
+<li>Make an appointment with an allergist to discuss your options and if allergy shots are right for you.</li>
+</ul>
+<blockquote>
+<p>reference<br>
+<a href="https://www.wikihow.com/Keep-a-Cat-if-You-Are-Allergic-to-Cats">https://www.wikihow.com/Keep-a-Cat-if-You-Are-Allergic-to-Cats</a></p>
+</blockquote>
+<h1 class="mume-header" id="litter-boxes">Litter Boxes</h1>
+
+<p>Cats eliminate to fulfill a fundamental need. They also use eliminations as a way to mark their territory. Indoor cats consider your home their territory.</p>
+<p>You can help ensure that your cat doesn&apos;t feel the need to use eliminations to announce that your home is her territory by providing an attractive litter box. The goal is to provide your cat with a positive experience when using the litter box. Positive experiences encourage the cat to continue using the litter boxes we supply.<br>
+Cats tend to avoid things that they associate with a negative experience. If your cat has a negative experience while using the litter box, for example the litter is dirty or something startles her, the cat most likely will avoid that box in the future.<br>
+There are four basic things to consider when setting up a litter box:</p>
+<ol>
+<li>Litter Box Hygiene</li>
+<li>Litter Box Type and Size</li>
+<li>Litter Substrate</li>
+<li>Litter Box location and number</li>
+</ol>
+<h2 class="mume-header" id="litter-box-hygiene">Litter Box Hygiene</h2>
+
+<p>Cats are fastidiously clean. Most cats will avoid using a dirty litter box in favor of a cleaner place. That &quot;cleaner place&quot; may turn out to be your carpet, bed, or sofa. To prevent house-soiling the litter box must be scooped daily and washed weekly with mild dish detergent.</p>
+<h2 class="mume-header" id="litter-box-type-and-size">Litter Box Type and Size</h2>
+
+<p>Litter boxes are available in a variety of sizes and shapes. Cats generally prefer large, uncovered litter boxes. Uncovered boxes are more easily accessible to your cat. Larger boxes are better because they can provide more room for your cat to move around. As a rule the litter box should be large enough for your cat to stand up (on all fours) and turn around in.</p>
+<p>Boxes with high sides or rims around the top may be appropriate for cats that tend to scatter litter over the side while digging. Low sided boxes are appropriate for small kittens and older cats that have trouble getting in and out of the litter box.<br>
+Covered litter boxes are also available. Owners may use covered boxes to keep their dog out of the cat litter or to keep litter &quot;out of sight&quot;. Some cats may prefer covered litter boxes because of the added privacy they provide. Remember that covered litter boxes will concentrate odors more than uncovered boxes. Your cat may refuse to use a covered box if it is not kept very clean.</p>
+<h2 class="mume-header" id="litter-substrate">Litter Substrate</h2>
+
+<p>There are many different substrates or litters on the market. Research has shown that most cats prefer fine-grained, unscented litters. Scoopable litters usually have finer grains than typical clay litter and have the added advantage of being easy to keep clean on a daily basis. Many cats are put off by the odor of scented or deodorant litters. This is also a good reason not to place room deodorizers or air fresheners near the litter box. Odor should not be a problem if the litter box is kept clean. If you find the odor offensive, the cat will also find it offensive and may not want to eliminate there. Remember, litter boxes should be scooped at least once a day and washed once a week with mild dish detergent.</p>
+<p>Once you find a litter that your cat likes, don&apos;t change types or brands or the cat may refuse to use the litter box. If you need to make a change the cat should be offered the new litter in a litter box placed next to the old box and litter. This allows the cat to decide if she wants to use the new litter. Fill boxes with enough litter to permit the cat to scratch and bury waste (usually about 2 inches deep).</p>
+<h2 class="mume-header" id="litter-box-location-and-number">Litter Box Location and Number</h2>
+
+<p>Cats need quiet and privacy when using their litter box. Litter boxes should be placed away from appliances or air ducts that could suddenly come on and startle the cat. They also should be placed so that humans and other animals can&apos;t &quot;sneak up&quot; on the cat.<br>
+The litter box must be easily accessible. Don&apos;t place the litter box in &quot;tight-spots&quot; such as under vanity sinks or low tables. Remember, the cat needs to be able to stand and move around comfortably in the litter box. Consider the path the cat will take to reach the litter box. Don&apos;t place it so that she has to climb over furniture or other animals to use it. For example, a litter box that is placed near the dog&apos;s bed or behind the couch may not get much use.</p>
+<p>The Golden Rule is &quot;one litter box per cat, plus one&quot;. Problems such as urine spraying can be prevented or reduced by providing multiple litter boxes. Each cat requires a place to eliminate and mark territory. In homes with more than one story, litter boxes must be available on each level of the home. Cats don&apos;t like to walk far to get to the nearest litter box. If there are litter boxes on each level of the home, there is less likely to be a problem with laziness.</p>
+<blockquote>
+<p>reference<br>
+<a href="https://indoorpet.osu.edu/cats/basicneeds/litter-boxes">https://indoorpet.osu.edu/cats/basicneeds/litter-boxes</a></p>
+</blockquote>
+<h1 class="mume-header" id="indoor-vs-outdoor">Indoor vs. Outdoor</h1>
+
+<p>Deciding if your cat is going to live completely indoors or spend some time outdoors requires careful consideration on your part. First, you need to know the benefits and risks associated with each lifestyle for your cat, and for your family. Then you need to decide what you will be best based on:</p>
+<ul>
+<li>Where you live.</li>
+<li>Health needs of your cat.</li>
+<li>Activity or behavioral needs of your cat.</li>
+<li>Recommendations from your veterinarian.</li>
+<li>Benefits and risks listed below.</li>
+</ul>
+<p>Wherever your cat spends most of his time, it is important to make sure he can enjoy natural cat activities such as: scratching, hunting, stalking, and catching prey (real or pretend). This is important to think about because when cats are kept entirely indoors, they can become bored, fearful, and/or anxious if their needs are not met. This can lead to unwanted behavior, such as scratching of furniture or not using the litter box. It is essential to make sure your cat has an enriched environment to meet their needs.</p>
+<p>Please speak with your veterinarian to get guidance on how to make sure your cat&#x2019;s emotional, social, and environmental needs are being met. Once you understand the benefits and risks of an indoor-only or indoor/outdoor lifestyle for your cat, you can minimize the risks and maximize the benefits for your cat.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
